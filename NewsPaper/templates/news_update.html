@@ -1,0 +1,13 @@
+{% extends 'flatpages/default.html' %} 
+ 
+{% block title %} News edit {% endblock title %}
+ 
+{% block content %}
+<h2>Редактор новости id-{{ post.id }}</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="подтвердить">
+</form>
+{% endblock content %} 
